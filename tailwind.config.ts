@@ -6,6 +6,7 @@ export default {
       colors: {
         'bright-cyan': '#58F6F4',
         'dark-blue': '#192958',
+        'bright-orange': '#FF5629',
       },
       fontFamily: {
         taiwan: ['TaiwanSans', 'sans-serif'],
@@ -23,7 +24,7 @@ export default {
         custom: '1.5',
       },
       backgroundImage: {
-        footer: "url('/src/assets/images/desktop/image-1.jpg')",
+        fixedBg: "url('/src/assets/images/desktop/hero.jpg')",
       },
     },
   },

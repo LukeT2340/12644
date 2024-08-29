@@ -1,4 +1,4 @@
-import logo from '../../../assets/images/common/logo.svg'
+import logo from '../../../assets/images/common/logo-white.svg'
 import CustomLink from '../../miscellaneous/CustomLink.tsx'
 import { BRAND_URL, BRAND_NAME } from '../../../js/global-variables.ts'
 
