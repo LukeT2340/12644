@@ -6,6 +6,7 @@ export default {
       colors: {
         'bright-cyan': '#58F6F4',
         'dark-blue': '#192958',
+        'light-orange': '#FFB42E'
       },
       fontFamily: {
         taiwan: ['TaiwanSans', 'sans-serif'],
