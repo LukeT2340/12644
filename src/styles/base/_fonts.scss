@@ -1,4 +1,5 @@
 @import url('https://p.typekit.net/p.css?s=1&k=bea2hgp&ht=tk&f=22710&a=9836756&app=typekit&e=css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @mixin font-opentype {
   -moz-font-feature-settings: 'liga=1', 'dliga=1', 'kern=1', 'onus=1';
@@ -16,10 +17,17 @@
 }
 
 @font-face {
-	font-family: 'ProximaNova';
-	src: url('../assets/fonts/ProximaNova-Regular.woff2') format('woff2');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'TaiwanSans';
+  src: url('../assets/fonts/Taiwan.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../assets/fonts/ProximaNova-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
