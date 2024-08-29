@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <>
-      <div>
+      <div className="bg-fixedBg bg-no-repeat bg-fixed bg-cover">
         <main>
           <Header />
           <article>
