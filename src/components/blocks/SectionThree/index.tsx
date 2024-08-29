@@ -3,7 +3,7 @@ import backgroundImg from "../../../assets/images/secThree-bg.png"
 import image6 from "../../../assets/images/6.jpg"
 import image7 from "../../../assets/images/7.jpg"
 import image8 from "../../../assets/images/8.jpg"
-
+import image9 from "../../../assets/images/secThree-dec.png"
 /*
   Section three images don't have rounded corners. Added rounded corners using CSS
 
@@ -30,6 +30,12 @@ const SectionThree: React.FC = () => (
                 </p>
               </div>
               <Image src={image8} alt="dumplings" className="rounded-[20px] lg:-translate-y-[270px] mt-[20px] w-full" />
+              <MotionImage src={image9} alt="bear cartoon" aria-label="bear" className="absolute -left-[305px] bottom-[150px]"
+                  initial={{ opacity: 0, y: 20, scale: 1.2, rotate: "30deg"}}
+                  whileInView={{ opacity: 1, y: 0, scale: 1, rotate: "0deg" }}
+                  transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
+                  viewport={{ once: true }}
+              />
             </CardBlock>   
           </div>  
         </div>
