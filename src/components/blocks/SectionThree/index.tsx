@@ -30,12 +30,7 @@ const SectionThree: React.FC = () => (
                 </p>
               </div>
               <Image src={image8} alt="dumplings" className="rounded-[20px] lg:-translate-y-[270px] mt-[20px] w-full" />
-              <MotionImage src={image9} alt="bear cartoon" aria-label="bear" className="absolute -left-[305px] bottom-[150px]"
-                  initial={{ opacity: 0, y: 20, scale: 1.2, rotate: "30deg"}}
-                  whileInView={{ opacity: 1, y: 0, scale: 1, rotate: "0deg" }}
-                  transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
-                  viewport={{ once: true }}
-              />
+              <Image src={image9} alt="bear cartoon" aria-label="bear" className="absolute -left-[305px] bottom-[150px]" />
             </CardBlock>   
           </div>  
         </div>

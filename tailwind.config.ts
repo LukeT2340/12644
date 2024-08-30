@@ -8,7 +8,9 @@ export default {
         'dark-blue': '#192958',
         'light-orange': '#FFB42E',
         'bright-orange': '#FF5629',
-        'purple': '#8146C6'
+        'purple': '#8146C6',
+        'sky-blue': '#269AF9',
+        'grassy-green': '#BCD64D'
       },
       fontFamily: {
         taiwan: ['TaiwanSans', 'sans-serif'],
