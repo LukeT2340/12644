@@ -25,28 +25,27 @@ const SectionTwo: React.FC = () => {
         <div className="block md:hidden">
           <ImageWithText backgroundImg={backgroundImgMobile} text1="Autumn" variant='b' />
         </div>
-        <div className="flex justify-center w-[100vw] xl:h-[1820px] md:-translate-y-[10rem] lg:-translate-y-[15rem] xl:-translate-y-[20rem]">
+        <div className="flex justify-center w-[100vw] xl:h-[1320px] 2xl:h-[1725px] xl:-translate-y-[15rem] 2xl:-translate-y-[24rem]">
           <CardBlock>
             <div className="flex flex-col lg:flex-row justify-between items-start lg:gap-[45px]">
-              <Image src={image1} alt="sunset"/>
-              <div className="translate-y-[38px] lg:mr-[115px] font-[17px] leading-[30px] font-[500]">
-                <p>September, October and November are a glorious time for nature lovers and photographers, as trees start to change colour from mid-September in northern Taiwan, with the orange wave rolling down the island over the next weeks.</p>
-                <p>Balmy temperatures and low humidity and rainfall are perfect for hiking, while further into the season you’ll find fewer tourists and shoulder-season hotel prices.</p>
-                <p>Two great ways see the autumn spectacle are by steam train on Alishan Forest Railway, or by hiking in Dasyueshan National Forest or Aowanda Forest Recreation Area, which is sumptuous with maples trees.</p>                  
-              </div>
+              <Image src={image1} alt="sunset" className="2xl:w-auto xl:w-[55%]" />
+              <p className="xl:mt-[38px] xl:mr-[40px] 2xl:mr-[103px] 2xl:text-[17px] xl:text-[13px] xl:leading-[23px] 2xl:leading-[30px] font-[500]">
+                September, October and November are a glorious time for nature lovers and photographers, as trees start to change colour from mid-September in northern Taiwan, with the orange wave rolling down the island over the next weeks.    Balmy temperatures and low humidity and rainfall are perfect for hiking, while further into the season you’ll find fewer tourists and shoulder-season hotel prices.
+                <br />Two great ways see the autumn spectacle are by steam train on Alishan Forest Railway, or by hiking in Dasyueshan National Forest or Aowanda Forest Recreation Area, which is sumptuous with maples trees.
+              </p>                  
             </div>
-            <div className="flex flex-col lg:flex-row justify-between lg:items-start mt-[50px] gap-[45px]">
-              <div className="lg:ml-[115px] font-[17px] leading-[30px] font-[500]">
-                <p>Scenic spot Sun Moon Lake, crisscrossed with cycle and hiking paths, is particularly lovely in this season. November is the sweet spot for visiting hot-spring resorts before December crowds and price increases. </p>
-                <p>Meanwhile plenty of festivals provide cultural fun. Mid-Autumn Festival in September is celebrated by eating mooncakes, and Confucius’ Birthday brings liveliness to temples. October sees National Day parades, Pride Parade and Halloween events.</p>
-              </div>
-              <Image src={image3} alt="tower" className="translate-y-[38px]" />
+            <div className="flex flex-col lg:flex-row justify-between lg:items-start xl:mt-[35px] 2xl:mt-[50px] gap-[45px]">
+              <p className="xl:ml-[60px] 2xl:text-[17px] xl:text-[13px] xl:leading-[23px] 2xl:leading-[30px] font-medium">
+                Scenic spot Sun Moon Lake, crisscrossed with cycle and hiking paths, is particularly lovely in this season. November is the sweet spot for visiting hot-spring resorts before December crowds and price increases.
+                <br />Meanwhile plenty of festivals provide cultural fun. Mid-Autumn Festival in September is celebrated by eating mooncakes, and Confucius’ Birthday brings liveliness to temples. October sees National Day parades, Pride Parade and Halloween events.
+              </p>
+              <Image src={image3} alt="tower" className="translate-y-[38px] xl:w-[49%]" />
             </div>
-            <div className="flex flex-col lg:flex-row justify-between lg:items-end mt-[80px] -translate-y-[102px]">
-              <Image src={image2} alt="river" />
-              <Image src={image4} alt="temples" />
+            <div className="flex flex-col lg:flex-row justify-between items-end xl:mt-[55px] 2xl:mt-[28px] -translate-y-[102px]">
+              <Image src={image2} alt="river" className="xl:w-[49%]" />
+              <Image src={image4} alt="temples" className="xl:w-[49%]" />
             </div>
-            <MotionImage src={image5} alt="bear cartoon" aria-label="bear" className="absolute -right-[305px] -bottom-[40px]"
+            <MotionImage src={image5} alt="bear cartoon" aria-label="bear" className="absolute xl:-right-[150px] 2xl:-right-[305px] -bottom-[40px] xl:w-[250px] 2xl:w-auto"
                     initial={{ opacity: 0, y: 20, scale: 1.2, rotate: "30deg"}}
                     whileInView={{ opacity: 1, y: 0, scale: 1, rotate: "0deg" }}
                     transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
