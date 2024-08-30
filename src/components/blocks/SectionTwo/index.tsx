@@ -1,6 +1,7 @@
 import { Inner, ImageWithText, Image, CardBlock, MotionImage } from "../../miscellaneous"
 
 import backgroundImg from "../../../assets/images/sectTwo-bg.png"
+import backgroundImgMobile from "../../../assets/images/secTwo-bg-mobile.png"
 import image1 from "../../../assets/images/1.jpg"
 import image2 from "../../../assets/images/2.jpg"
 import image3 from "../../../assets/images/3.jpg"
@@ -18,10 +19,15 @@ const SectionTwo: React.FC = () => {
         variant="a"
       />
       <Inner>
-        <ImageWithText backgroundImg={backgroundImg} text1="Autumn" variant='b' />
-        <div className="flex justify-center w-[100vw] xl:h-[1820px] lg:-translate-y-[200px]">
+        <div className="hidden md:block">
+          <ImageWithText backgroundImg={backgroundImg} text1="Autumn" variant='b' />
+        </div>
+        <div className="block md:hidden">
+          <ImageWithText backgroundImg={backgroundImgMobile} text1="Autumn" variant='b' />
+        </div>
+        <div className="flex justify-center w-[100vw] xl:h-[1820px] md:-translate-y-[10rem] lg:-translate-y-[15rem] xl:-translate-y-[20rem]">
           <CardBlock>
-            <div className="flex flex-col lg:flex-row justify-between lg:items-start lg:gap-[45px]">
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:gap-[45px]">
               <Image src={image1} alt="sunset"/>
               <div className="translate-y-[38px] lg:mr-[115px] font-[17px] leading-[30px] font-[500]">
                 <p>September, October and November are a glorious time for nature lovers and photographers, as trees start to change colour from mid-September in northern Taiwan, with the orange wave rolling down the island over the next weeks.</p>
