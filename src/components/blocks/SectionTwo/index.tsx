@@ -18,15 +18,15 @@ const SectionTwo: React.FC = () => {
           text2="Take your pick: Taiwan offers unique experiences for visitors year-round. If you’ve been before, you’ll find variety and new experiences in other seasons. And if you’re a first timer, you’ll discover more to Taiwan than you ever imagined."
           variant="a"
         />
-        <div className="-translate-y-[200px]">
+        <div className="lg:-translate-y-[200px]">
           <ImageWithText backgroundImg={backgroundImg} text1="Autumn" variant='b' />
           <div className="flex justify-center xl:h-[1820px]">
             <CardBlock height="1820px">
-              <div className="flex flex-col lg:flex-row justify-between lg:items-start gap-[45px]">
+              <div className="flex flex-col lg:flex-row justify-between lg:items-start lg:gap-[45px]">
                 <Image src={image1} alt="sunset"/>
                 <div className="translate-y-[38px] lg:mr-[115px] font-[17px] leading-[30px] font-[500]">
                   <p>September, October and November are a glorious time for nature lovers and photographers, as trees start to change colour from mid-September in northern Taiwan, with the orange wave rolling down the island over the next weeks.</p>
-                  <p> Balmy temperatures and low humidity and rainfall are perfect for hiking, while further into the season you’ll find fewer tourists and shoulder-season hotel prices.</p>
+                  <p>Balmy temperatures and low humidity and rainfall are perfect for hiking, while further into the season you’ll find fewer tourists and shoulder-season hotel prices.</p>
                   <p>Two great ways see the autumn spectacle are by steam train on Alishan Forest Railway, or by hiking in Dasyueshan National Forest or Aowanda Forest Recreation Area, which is sumptuous with maples trees.</p>                  
                 </div>
               </div>

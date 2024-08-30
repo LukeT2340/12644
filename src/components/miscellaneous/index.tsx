@@ -36,12 +36,12 @@ export const Button: React.FC<ButtonProps> = ({
 }
 
 export const Inner = ({ children }: { children: React.ReactNode }) => (
-  <div className="lg:max-w-[98vw] 2xl:max-w-[95vw] px-[20px] lg:px-0">{children}</div>
+  <div className="lg:max-w-[98vw] 2xl:max-w-[95vw] lg:px-0">{children}</div>
 )
 
 export const ImageWithText = ({ backgroundImg, text1, text2, variant }: { backgroundImg: string, text1: string, text2?: string, variant: string }) => {
     return variant === 'a' ?
-      <div className="flex justify-center w-[100vw] -translate-y-[15px] relative">
+      <div className="flex justify-center -translate-y-[15px] relative">
         <div className='flex flex-col align-center lg:w-[786px] bg-bright-orange text-center text-[17px] leading-[30px] text-white lg:px-[96px] py-[200px] '>
           {/* <MotionImage 
             src={backgroundImg} 
@@ -69,5 +69,5 @@ export const ImageWithText = ({ backgroundImg, text1, text2, variant }: { backgr
 }
 
 export const CardBlock = ({ children }: { children: React.ReactNode }) => (
-  <div className={`lg:w-[1280px] bg-white rounded-[20px] py-[71px] px-[80px] -top-[200px] relative`}>{children}</div>  
+  <div className={`lg:w-[1280px] bg-white rounded-[20px] px-[30px] py-[30px] lg:py-[71px] lg:px-[80px] -top-[200px] relative`}>{children}</div>  
 )
