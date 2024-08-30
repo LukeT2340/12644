@@ -2,6 +2,7 @@ import { Inner, ImageWithText, CardBlock, Image } from "../../miscellaneous"
 import backgroundImg from "../../../assets/images/SecFive-bg.png"
 import image15 from "../../../assets/images/15.jpg"
 import image16 from "../../../assets/images/16.jpg"
+import image17 from "../../../assets/images/SecFive-dec.png"
 
 const SectionFive: React.FC = () => (
     <section className="section-five bg-sky-blue">
@@ -26,6 +27,7 @@ const SectionFive: React.FC = () => (
                             </p>
                         </div>
                     </div>
+                    <Image src={image17} alt="bear cartoon" aria-label="bear" className="absolute -right-[220px] -bottom-[50px]" />
                 </CardBlock>
             </div>
         </div>
