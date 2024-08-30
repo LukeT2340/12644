@@ -36,13 +36,13 @@ export const Button: React.FC<ButtonProps> = ({
 }
 
 export const Inner = ({ children }: { children: React.ReactNode }) => (
-  <div className="lg:max-w-[98vw] 2xl:max-w-[95vw] lg:px-0">{children}</div>
+  <div className="lg:max-w-[98vw] 2xl:max-w-[95vw] lg:px-0 lg:-translate-y-[200px]">{children}</div>
 )
 
 export const ImageWithText = ({ backgroundImg, text1, text2, variant }: { backgroundImg: string, text1: string, text2?: string, variant: string }) => {
     return variant === 'a' ?
       <div className="flex justify-center -translate-y-[15px] relative">
-        <div className='flex flex-col align-center lg:w-[786px] bg-bright-orange text-center text-[17px] leading-[30px] text-white lg:px-[96px] py-[200px] '>
+        <div className='flex flex-col align-center lg:w-[786px] bg-bright-orange text-center text-[17px] leading-[30px] text-white lg:px-[96px] py-[150px] md:py-[180px] lg:py-[200px] '>
           {/* <MotionImage 
             src={backgroundImg} 
             alt={text1} 
@@ -55,19 +55,20 @@ export const ImageWithText = ({ backgroundImg, text1, text2, variant }: { backgr
           <Image 
             src={backgroundImg} 
             alt={text1} 
-            className='absolute left-1/2 -translate-x-[50%] -top-[250px]'
+            className='absolute left-1/2 -translate-x-[50%] -top-[150px] md:-top-[250px] w-[300px] md:w-auto'
           />
-          <p className='font-bold p-0'>{text1}</p>
-          <p className='p-0 font-[500]'>{text2}</p>
+          <p className='font-bold px-[60px]'>{text1}</p>
+          <p className='px-[60px] font-[500]'>{text2}</p>
         </div>
       </div>
     : 
       <div className="w-[100vw] relative">
-        <Image src={backgroundImg} alt={text1} />
+        <Image src={backgroundImg} alt={text1} className='w-[100vw]'/>
         <h1 className='font-taiwan text-[96px] font-[500] leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -tanslate-y-1/2'>{text1}</h1>
       </div>
 }
 
+// White block with rounded corners where content sits
 export const CardBlock = ({ children }: { children: React.ReactNode }) => (
-  <div className={`lg:w-[1280px] bg-white rounded-[20px] px-[30px] py-[30px] lg:py-[71px] lg:px-[80px] -top-[200px] relative`}>{children}</div>  
+  <div className={`lg:w-[1280px] bg-white rounded-[20px] px-[30px] py-[30px] lg:py-[71px] lg:px-[80px] relative`}>{children}</div>  
 )

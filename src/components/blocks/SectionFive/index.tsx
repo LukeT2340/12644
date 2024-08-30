@@ -6,10 +6,9 @@ import image17 from "../../../assets/images/SecFive-dec.png"
 
 const SectionFive: React.FC = () => (
     <section className="section-five bg-sky-blue">
-      <Inner>
-        <div className="-translate-y-[200px]">
+        <Inner>
             <ImageWithText backgroundImg={backgroundImg} text1="Summer" variant='b' />
-            <div className="flex justify-center xl:h-[1300px]">      
+            <div className="flex justify-center w-[100vw] xl:h-[1300px] lg:-translate-y-[200px]">
                 <CardBlock>
                     <div className="flex justify-between gap-[56px]">
                         <div className="flex flex-col w-1/2">
@@ -30,8 +29,7 @@ const SectionFive: React.FC = () => (
                     <Image src={image17} alt="bear cartoon" aria-label="bear" className="absolute -right-[220px] -bottom-[50px]" />
                 </CardBlock>
             </div>
-        </div>
-      </Inner>
+        </Inner>
     </section>
   )
   
