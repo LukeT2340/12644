@@ -55,7 +55,7 @@ export const ImageWithText = ({ backgroundImg, text1, text2, variant }: { backgr
     : 
       <div className="w-[100vw] relative">
         <Image src={backgroundImg} alt={text1} className='w-[100vw]'/>
-        <h1 className='font-taiwan text-[96px] font-[500] leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -tanslate-y-1/2'>{text1}</h1>
+        <h1 className='font-taiwan  text-[48px] lg:text-[96px] font-[500] leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>{text1}</h1>
       </div>
 }
 
