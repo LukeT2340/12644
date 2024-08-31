@@ -1,4 +1,4 @@
-import { Inner, ImageWithText, CardBlock, Image } from "../../miscellaneous"
+import { Inner, SeasonSection, Image } from "../../miscellaneous"
 import backgroundImg from "../../../assets/images/SecFour-bg.png"
 import image10 from "../../../assets/images/10.jpg"
 import image11 from "../../../assets/images/11.jpg"
@@ -10,10 +10,9 @@ import image15 from "../../../assets/images/secFour-dec.png"
 const SectionFour: React.FC = () => (
     <section className="section-four bg-grassy-green">
       <Inner>
-        <ImageWithText backgroundImg={backgroundImg} text1="Spring" variant='b' />
-        <div className="flex justify-center w-[100vw] xl:h-[1600px] 2xl:h-[2030px] md:-translate-y-[10rem] xl:-translate-y-[15rem] 2xl:-translate-y-[24rem]">
-            <CardBlock>
-                <Image src={image10} alt="Taitung aboriginal dancers" className="rounded-[20px] w-full mb-[71px]" />
+        <SeasonSection seasonImage={backgroundImg} seasonText="Spring">
+          <div className="2xl:h-[1880px] xl:h-[1480px]">
+          <Image src={image10} alt="Taitung aboriginal dancers" className="rounded-[20px] w-full mb-[71px]" />
                 <div className="flex justify-between gap-[12px]">
                     <div className="flex flex-col w-[45%]">
                         <p className="2xl:text-[17px] xl:text-[13px] xl:leading-[23px] 2xl:leading-[30px] font-[500] ml-[93px] mr-[20px] mb-auto p-0">Cherry-blossom season starts early in Taiwan: expect the first blossoms to appear in the south as early as February. By springtime, though, you’ll enjoy the full pink spectacle in places such as Yangmingshan National Park – where azaleas and canna lilies bloom too.</p>
@@ -28,8 +27,8 @@ const SectionFour: React.FC = () => (
                     </div>
                 </div>
                 <Image src={image15} alt="bear cartoon" aria-label="bear" className="absolute 2xl:-left-[220px] 2xl:-bottom-[50px] xl:-left-[130px] xl:-bottom-[50px] xl:w-[250px] 2xl:w-auto" />
-            </CardBlock>
-        </div>
+          </div>
+        </SeasonSection>
       </Inner>
     </section>
   )

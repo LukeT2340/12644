@@ -1,32 +1,21 @@
-import { Inner, ImageWithText, Image, CardBlock, MotionImage } from "../../miscellaneous"
+import { Inner, Image, SeasonSection, MotionImage } from "../../miscellaneous"
 
 import backgroundImg from "../../../assets/images/sectTwo-bg.png"
-import backgroundImgMobile from "../../../assets/images/secTwo-bg-mobile.png"
+
 import image1 from "../../../assets/images/1.jpg"
 import image2 from "../../../assets/images/2.jpg"
 import image3 from "../../../assets/images/3.jpg"
 import image4 from "../../../assets/images/4.jpg"
 import image5 from "../../../assets/images/5.png"
-import image6 from "../../../assets/images/secTwo-dec.png"
+import Introduction from "../../blocks/Introduction/index"
 
 const SectionTwo: React.FC = () => {
   return (
     <section className="section-two bg-light-orange">
-      <ImageWithText 
-        backgroundImg={image6} 
-        text1="Wondering when the best time is to visit Taiwan?" 
-        text2="Take your pick: Taiwan offers unique experiences for visitors year-round. If you’ve been before, you’ll find variety and new experiences in other seasons. And if you’re a first timer, you’ll discover more to Taiwan than you ever imagined."
-        variant="a"
-      />
+      <Introduction />
       <Inner>
-        <div className="hidden md:block">
-          <ImageWithText backgroundImg={backgroundImg} text1="Autumn" variant='b' />
-        </div>
-        <div className="block md:hidden">
-          <ImageWithText backgroundImg={backgroundImgMobile} text1="Autumn" variant='b' />
-        </div>
-        <div className="flex justify-center w-[100vw] xl:h-[1320px] 2xl:h-[1725px] xl:-translate-y-[15rem] 2xl:-translate-y-[24rem]">
-          <CardBlock>
+        <SeasonSection seasonImage={backgroundImg} seasonText="Autumn">
+          <div className="2xl:h-[1600px] xl:h-[1200px]">
             <div className="flex flex-col lg:flex-row justify-between items-start lg:gap-[45px]">
               <Image src={image1} alt="sunset" className="2xl:w-auto xl:w-[55%]" />
               <p className="xl:mt-[38px] xl:mr-[40px] 2xl:mr-[103px] 2xl:text-[17px] xl:text-[13px] xl:leading-[23px] 2xl:leading-[30px] font-[500]">
@@ -51,8 +40,8 @@ const SectionTwo: React.FC = () => {
                     transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
                     viewport={{ once: true }}
               />
-          </CardBlock>   
-        </div>  
+            </div>
+        </SeasonSection>   
       </Inner>
     </section>
   )
