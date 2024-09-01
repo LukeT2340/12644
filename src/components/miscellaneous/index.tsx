@@ -51,11 +51,11 @@ export const SeasonImage = ({ backgroundImg, text }: { backgroundImg: string, te
 
 // White block with rounded corners where content sits
 export const CardBlock = ({ children }: { children: React.ReactNode }) => (
-<div className='xl:w-[980px] 2xl:w-[1280px] bg-white rounded-[20px] 2xl:py-[71px] xl:py-[55px] md:py-[45px] 2xl:px-[80px] xl:px-[65px] md:px-[55px] z-10 lg:-translate-y-[100px] xl:-translate-y-[150px] 2xl:-translate-y-[260px]'>{children}</div>  
+<div className='lg:w-[980px] 2xl:w-[1280px] bg-white rounded-[20px] 2xl:py-[71px] xl:py-[55px] md:py-[45px] 2xl:px-[80px] xl:px-[65px] md:px-[55px] z-10 lg:-translate-y-[100px] xl:-translate-y-[150px] 2xl:-translate-y-[260px]'>{children}</div>  
 )
 
 export const SeasonSection = ({ children, seasonImage, seasonImageMobile , seasonText }: { children: React.ReactNode, seasonImage: string, seasonImageMobile: string, seasonText: string }) => (
-<div className='relative flex flex-col items-center lg:-translate-y-[100px] xl:-translate-y-[120px] 2xl:-translate-y-[200px] z-40'>
+<div className='relative flex flex-col items-center lg:-translate-y-[105px] xl:-translate-y-[120px] 2xl:-translate-y-[200px] z-40'>
   <div className='md:block hidden'>
     <SeasonImage backgroundImg={seasonImage} text={seasonText} />
   </div>
