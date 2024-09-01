@@ -10,7 +10,7 @@ import image9 from "../../../assets/images/secThree-dec.png"
 */
 
 const SectionThree: React.FC = () => (
-  <section className="section-three bg-purple">
+  <section className="section-three bg-purple 2xl:h-[2650px] xl:h-[2060px]"> { /* Manually setting the height like this seems like a poor solution. Had to do this to avoid empty space down the bottom due to translate-y */}
     <Inner>
       <SeasonSection seasonImage={backgroundImg} seasonText="Winter">
         <div className="2xl:h-[1820px] xl:h-[1390px]">

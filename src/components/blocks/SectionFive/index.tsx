@@ -5,7 +5,7 @@ import image16 from "../../../assets/images/16.jpg"
 import image17 from "../../../assets/images/SecFive-dec.png"
 
 const SectionFive: React.FC = () => (
-    <section className="section-five bg-sky-blue 2xl:h-[1900px] xl:h-[1500px]"> { /* Manually setting the height like this seems like a poor solution. Did this to avoid empty space down the bottom of webpage due to translate-y */}
+    <section className="section-five bg-sky-blue 2xl:h-[1900px] xl:h-[1550px]"> { /* Manually setting the height like this seems like a poor solution. Did this to avoid empty space down the bottom of webpage due to translate-y */}
         <Inner>
             <SeasonSection seasonImage={backgroundImg} seasonText="Summer">
                 <div className="2xl:h-[1150px] xl:h-[900px]">

@@ -44,19 +44,24 @@ export const Inner = ({ children }: { children: React.ReactNode }) => (
 // Title of each section with image representing the season and text that sits in the center of the image
 export const SeasonImage = ({ backgroundImg, text }: { backgroundImg: string, text: string }) => (
   <div className="w-[100vw] relative">
-    <Image src={backgroundImg} alt={text} />
-    <h1 className='font-taiwan xl:text-[70px] 2xl:text-[96px] font-light leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>{text}</h1>
+    <Image src={backgroundImg} alt={text} className='w-[100vw]'/>
+    <h1 className='font-taiwan lg:text-[50px] xl:text-[70px] 2xl:text-[96px] font-light leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>{text}</h1>
   </div>
 )
 
 // White block with rounded corners where content sits
 export const CardBlock = ({ children }: { children: React.ReactNode }) => (
-<div className='xl:w-[980px] 2xl:w-[1280px] bg-white rounded-[20px] xl:py-[55px] xl:px-[65px] 2xl:py-[71px] 2xl:px-[80px] z-10 xl:-translate-y-[150px] 2xl:-translate-y-[260px]'>{children}</div>  
+<div className='xl:w-[980px] 2xl:w-[1280px] bg-white rounded-[20px] 2xl:py-[71px] xl:py-[55px] md:py-[45px] 2xl:px-[80px] xl:px-[65px] md:px-[55px] z-10 lg:-translate-y-[100px] xl:-translate-y-[150px] 2xl:-translate-y-[260px]'>{children}</div>  
 )
 
-export const SeasonSection = ({ children, seasonImage, seasonText }: { children: React.ReactNode, seasonImage: string, seasonText: string }) => (
-<div className='relative flex flex-col items-center xl:-translate-y-[120px] 2xl:-translate-y-[200px] z-40'>
-  <SeasonImage backgroundImg={seasonImage} text={seasonText} />
+export const SeasonSection = ({ children, seasonImage, seasonImageMobile , seasonText }: { children: React.ReactNode, seasonImage: string, seasonImageMobile: string, seasonText: string }) => (
+<div className='relative flex flex-col items-center lg:-translate-y-[100px] xl:-translate-y-[120px] 2xl:-translate-y-[200px] z-40'>
+  <div className='md:block hidden'>
+    <SeasonImage backgroundImg={seasonImage} text={seasonText} />
+  </div>
+  <div className='md:hidden block'>
+    <SeasonImage backgroundImg={seasonImageMobile} text={seasonText} />
+  </div>
   <CardBlock>
     {children}
   </CardBlock>

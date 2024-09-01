@@ -8,7 +8,7 @@ import image14 from "../../../assets/images/14.jpg"
 import image15 from "../../../assets/images/secFour-dec.png"
 
 const SectionFour: React.FC = () => (
-    <section className="section-four bg-grassy-green">
+    <section className="section-four bg-grassy-green 2xl:h-[2800px] xl:h-[2200px]"> { /* Manually setting the height like this seems like a poor solution. Had to do this to avoid empty space down the bottom due to translate-y */}
       <Inner>
         <SeasonSection seasonImage={backgroundImg} seasonText="Spring">
           <div className="2xl:h-[1880px] xl:h-[1480px]">
