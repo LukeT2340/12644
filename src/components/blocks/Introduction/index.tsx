@@ -7,7 +7,7 @@ const Introduction = () => {
         <Inner>
             <div className="relative flex flex-col items-center w-[100vw]">
                 <Image src={gradient} alt="gradient background" className="absolute z-10 h-full w-[100vw]" />
-                <div className='relative lg:px-[100px] lg:w-[600px] 2xl:w-[786px] bg-bright-orange text-center lg:text-[13px] lg:leading-[23px] xl:text-[17px] text-[14px] leading-[25px] 2xl:leading-[30px] text-white py-[140px] lg:py-[130px] 2xl:py-[200px] z-10 px-[25px]'>
+                <div className='relative lg:px-[100px] lg:w-[600px] 2xl:w-[786px] bg-bright-orange text-center lg:text-[13px] lg:leading-[23px] xl: text-[14px] leading-[25px] 2xl: text-white py-[140px] lg:py-[130px] 2xl:py-[200px] z-10 px-[25px]'>
                     <Image 
                     src={image5} 
                     alt={"Wondering when the best time is to visit Taiwan?" } 

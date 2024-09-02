@@ -42,12 +42,50 @@ export const Inner = ({ children }: { children: React.ReactNode }) => (
 )
 
 // Title of each section with image representing the season and text that sits in the center of the image
-export const SeasonImage = ({ backgroundImg, text }: { backgroundImg: string, text: string }) => (
-  <div className={`${text === "Winter" ? "w-[101vw]": "w-[100vw]"} relative`}>
-    <Image src={backgroundImg} alt={text} className={`${text === "Winter" ? "w-[101vw]": "w-[100vw]"}`}/>
-    <h1 className='font-taiwan lg:text-[96px] text-[48px] leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>{text}</h1>
-  </div>
-)
+export const SeasonImage = ({ backgroundImg, text }: { backgroundImg: string, text: string }) => {
+  const heading = text.split('')
+  
+  return (
+    <div className={`${text === "Winter" ? "w-[101vw]": "w-[100vw]"} relative overflow-hidden`}>
+      <Image src={backgroundImg} alt={text} className={`${text === "Winter" ? "w-[101vw]": "w-[100vw]"}`} data-scroll data-scroll-speed="-.05" />
+      {/* <motion.h1
+          className="font-taiwan lg:text-[96px] text-[48px] leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'"
+          initial={{ opacity: 0, top: '70%', letterSpacing: '30px' }}
+          whileInView={{ opacity: 1, top: '50%', letterSpacing: 0 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          >
+          {text}
+      </motion.h1> */}
+      <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden'>
+        {heading.map((el, index) => (
+          <motion.span
+            className="font-taiwan lg:text-[96px] text-[48px] leading-[106px] text-white inline-block"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: index / 20,
+              ease: 'easeOut'
+            }}
+            key={index}
+          >
+            {el}{" "}
+          </motion.span>
+        ))}
+      </div>
+      {/* <motion.h1
+          className="font-taiwan lg:text-[96px] text-[48px] leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'"
+          initial={{ opacity: 0, top: '70%', letterSpacing: '30px' }}
+          whileInView={{ opacity: 1, top: '50%', letterSpacing: 0 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          >
+          {text}
+      </motion.h1> */}
+    </div>
+  )
+}
 
 // White block with rounded corners where content sits
 export const CardBlock = ({ children }: { children: React.ReactNode }) => (
@@ -55,7 +93,7 @@ export const CardBlock = ({ children }: { children: React.ReactNode }) => (
 )
 
 export const SeasonSection = ({ children, seasonImage, seasonImageMobile , seasonText }: { children: React.ReactNode, seasonImage: string, seasonImageMobile: string, seasonText: string }) => (
-<div className='relative flex flex-col items-center lg:-translate-y-[105px] xl:-translate-y-[120px] 2xl:-translate-y-[200px] z-40'>
+<div className='relative flex flex-col items-center -translate-y-[100px] lg:-translate-y-[105px] xl:-translate-y-[120px] 2xl:-translate-y-[200px] z-40'>
   <div className='md:block hidden'>
     <SeasonImage backgroundImg={seasonImage} text={seasonText} />
   </div>
@@ -69,7 +107,7 @@ export const SeasonSection = ({ children, seasonImage, seasonImageMobile , seaso
 )
 
 export const Link = ({ icon, alt ,text, href, className }: { icon: string, alt: string , text: string, href: string, className?: string }) => (
-  <li className={`hover:cursor-pointer hover:opacity-80 flex text-[17px] font-bold items-center justify-start ${className ? className : ''}`}>
+  <li className={`hover:cursor-pointer hover:opacity-80 flex  font-bold items-center justify-start ${className ? className : ''}`}>
     <Image src={icon} alt={alt} className={`${alt === "Facebook icon" ? 'w-[17px] ml-[6.5px] mr-[22.5px]' : 'w-[30px] mr-[16px]' } object-contain`}/>
     <a href={href} >{text}</a>
   </li>

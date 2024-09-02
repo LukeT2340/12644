@@ -9,6 +9,7 @@ import image3 from "../../../assets/images/3.jpg"
 import image4 from "../../../assets/images/4.jpg"
 import image5 from "../../../assets/images/5.png"
 import Introduction from "../../blocks/Introduction/index"
+import { motion } from "framer-motion"
 
 const SectionTwo: React.FC = () => {
   return (
@@ -17,12 +18,18 @@ const SectionTwo: React.FC = () => {
       <div className="bg-light-orange">
         <Inner>
           <SeasonSection seasonImage={backgroundImg} seasonImageMobile={backgroundImgMobile} seasonText="Autumn">
-            <div className="xl:h-[1580px] text-[17px] leading-[30px]">
-              <div className="flex flex-col lg:flex-row justify-between items-start lg:gap-[45px]">
-                <Image src={image1} alt="sunset" />
-                <div className="xl:mr-[110px]">
+            <div className="xl:h-[1600px]">
+              <div className="flex flex-col lg:flex-row items-start lg:gap-[45px]">
+                <div className="overflow-hidden rounded-[20px]">
+                  <Image src={image1} alt="sunset" data-scroll data-scroll-speed="-.05" className="rounded-[20px]"/>
+                </div>
+                <motion.div
+                  className="xl:max-w-[356px] xl:mt-[40px]"
+                  initial={{ opacity: 0.5, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}>
                   <p>
-                    September, October and November are a glorious time for nature lovers and photographers, as trees start to change colour from mid-September in northern Taiwan, with the orange wave rolling down the island over the next weeks.
+                  September, October and November are a glorious time for nature lovers and photographers, as trees start to change colour from mid-September in northern Taiwan, with the orange wave rolling down the island over the next weeks.
                   </p>
                   <p>
                     Balmy temperatures and low humidity and rainfall are perfect for hiking, while further into the season you’ll find fewer tourists and shoulder-season hotel prices.
@@ -30,22 +37,32 @@ const SectionTwo: React.FC = () => {
                   <p>
                     Two great ways see the autumn spectacle are by steam train on Alishan Forest Railway, or by hiking in Dasyueshan National Forest or Aowanda Forest Recreation Area, which is sumptuous with maples trees.
                   </p>     
-                </div>             
+                </motion.div>
               </div>
-              <div className="flex flex-col lg:flex-row justify-between lg:items-start gap-[45px]">
-                <div className="xl:ml-[125px] xl:mb-[100px]">
+              <div className="flex flex-col lg:flex-row justify-end lg:items-start gap-[45px] xl:-translate-y-[50px]">
+                <motion.div
+                  className="xl:max-w-[356px] xl:mt-[40px] xl:max-w-[391px]"
+                  initial={{ opacity: 0.5, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}>
                   <p>
                     Scenic spot Sun Moon Lake, crisscrossed with cycle and hiking paths, is particularly lovely in this season. November is the sweet spot for visiting hot-spring resorts before December crowds and price increases.
                   </p>  
                   <p>
                     Meanwhile plenty of festivals provide cultural fun. Mid-Autumn Festival in September is celebrated by eating mooncakes, and Confucius’ Birthday brings liveliness to temples. October sees National Day parades, Pride Parade and Halloween events.
                   </p>
+                </motion.div> 
+                <div className="overflow-hidden rounded-[20px] translate-y-[55px]">
+                  <Image src={image3} alt="tower" data-scroll data-scroll-speed="-.05"  />
                 </div>
-                <Image src={image3} alt="tower" className="translate-y-[55px] lg:w-[49%]" />
               </div>
-              <div className="flex flex-col lg:flex-row justify-between items-end xl:mt-[55px] lg:-translate-y-[55px] xl:-translate-y-[145px]">
-                <Image src={image2} alt="river" className="lg:w-[49%]" />
-                <Image src={image4} alt="temples" className="lg:w-[49%]" />
+              <div className="flex flex-col lg:flex-row justify-between items-end xl:-translate-y-[60px]">
+                <div className="overflow-hidden rounded-[20px]">
+                  <Image src={image2} alt="river" data-scroll data-scroll-speed="-.05"/>
+                </div>
+                <div className="overflow-hidden rounded-[20px]">
+                  <Image src={image4} alt="temples" data-scroll data-scroll-speed="-.05"/>
+                </div>
               </div>
               <MotionImage src={image5} alt="bear cartoon" aria-label="bear" className="absolute 2xl:-right-[305px] lg:-right-0 lg:bottom-0 2xl:-bottom-[40px] 2xl:w-auto xl:w-[250px] lg:w-[220px]"
                       initial={{ opacity: 0, y: 20, scale: 1.2, rotate: "30deg"}}
