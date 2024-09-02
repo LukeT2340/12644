@@ -43,15 +43,15 @@ export const Inner = ({ children }: { children: React.ReactNode }) => (
 
 // Title of each section with image representing the season and text that sits in the center of the image
 export const SeasonImage = ({ backgroundImg, text }: { backgroundImg: string, text: string }) => (
-  <div className="w-[100vw] relative">
-    <Image src={backgroundImg} alt={text} className='w-[100vw]'/>
-    <h1 className='font-taiwan lg:text-[50px] xl:text-[70px] 2xl:text-[96px] font-light leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>{text}</h1>
+  <div className={`${text === "Winter" ? "w-[101vw]": "w-[100vw]"} relative`}>
+    <Image src={backgroundImg} alt={text} className={`${text === "Winter" ? "w-[101vw]": "w-[100vw]"}`}/>
+    <h1 className='font-taiwan lg:text-[96px] text-[48px] leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>{text}</h1>
   </div>
 )
 
 // White block with rounded corners where content sits
 export const CardBlock = ({ children }: { children: React.ReactNode }) => (
-<div className='lg:w-[980px] 2xl:w-[1280px] bg-white rounded-[20px] 2xl:py-[71px] xl:py-[55px] md:py-[45px] 2xl:px-[80px] xl:px-[65px] md:px-[55px] z-10 lg:-translate-y-[100px] xl:-translate-y-[150px] 2xl:-translate-y-[260px]'>{children}</div>  
+<div className='lg:w-[980px] xl:w-[1280px] bg-white rounded-[20px] 2xl:py-[71px] xl:py-[55px] md:py-[45px] 2xl:px-[80px] xl:px-[65px] md:px-[55px] z-10 lg:-translate-y-[100px] xl:-translate-y-[150px] 2xl:-translate-y-[260px]'>{children}</div>  
 )
 
 export const SeasonSection = ({ children, seasonImage, seasonImageMobile , seasonText }: { children: React.ReactNode, seasonImage: string, seasonImageMobile: string, seasonText: string }) => (
@@ -66,4 +66,11 @@ export const SeasonSection = ({ children, seasonImage, seasonImageMobile , seaso
     {children}
   </CardBlock>
 </div>
+)
+
+export const Link = ({ icon, alt ,text, href, className }: { icon: string, alt: string , text: string, href: string, className?: string }) => (
+  <li className={`hover:cursor-pointer hover:opacity-80 flex text-[17px] font-bold items-center justify-start ${className ? className : ''}`}>
+    <Image src={icon} alt={alt} className={`${alt === "Facebook icon" ? 'w-[17px] ml-[6.5px] mr-[22.5px]' : 'w-[30px] mr-[16px]' } object-contain`}/>
+    <a href={href} >{text}</a>
+  </li>
 )

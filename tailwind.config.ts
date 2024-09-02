@@ -29,6 +29,7 @@ export default {
       },
       backgroundImage: {
         fixedBg: "url('/src/assets/images/desktop/hero.jpg')",
+        linksBg: "url('/src/assets/images/links-bg.jpg')"
       },
     },
   },
