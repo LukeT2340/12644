@@ -2,7 +2,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      screens: {},
+      screens: {
+        '3xl': '2000px'
+      },
       colors: {
         'bright-cyan': '#58F6F4',
         'dark-blue': '#192958',
