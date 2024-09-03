@@ -4,7 +4,7 @@ import backgroundImgMobile from "../../../assets/images/secThree-bg-mobile.png";
 import image6 from "../../../assets/images/6.jpg";
 import image7 from "../../../assets/images/7.jpg";
 import image8 from "../../../assets/images/8.jpg";
-import image9 from "../../../assets/images/secThree-dec.png";
+//import image9 from "../../../assets/images/secThree-dec.png";
 import { motion } from "framer-motion";
 
 const SectionThree: React.FC = () => (
@@ -92,7 +92,7 @@ const SectionThree: React.FC = () => (
         </div>
       </SeasonSection>
     </Inner>
-    <MotionImage
+    {/* <MotionImage
       src={image9}
       alt="bear cartoon"
       aria-label="bear"
@@ -101,7 +101,7 @@ const SectionThree: React.FC = () => (
       whileInView={{ rotate: "0deg" }}
       transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
       viewport={{ once: true }}
-    />
+    /> */}
   </section>
 );
 
