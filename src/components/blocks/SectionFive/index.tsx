@@ -1,6 +1,6 @@
 import { Inner, SeasonSection, Image, MotionImage } from "../../miscellaneous";
 import backgroundImg from "../../../assets/images/SecFive-bg.png";
-import backgroundImgMobile from "../../../assets/images/SecFive-bg-mobile.png";
+import backgroundImgMobile from "../../../assets/images/secFive-bg-mobile.png";
 import image15 from "../../../assets/images/15.jpg";
 import image16 from "../../../assets/images/16.jpg";
 import image17 from "../../../assets/images/secFive-dec.png";
