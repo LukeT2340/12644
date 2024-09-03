@@ -78,7 +78,7 @@ const SectionTwo: React.FC = () => {
       <div className="bg-light-orange">
         <Inner>
           <SeasonSection seasonImage={backgroundImg} seasonImageMobile={backgroundImgMobile} seasonText="Autumn">
-            <div className="xl:h-[1650px]">
+            <div className="xl:h-[1600px]">
               <div className="flex flex-col lg:flex-row items-start lg:gap-[45px]">
                 <div className="overflow-hidden rounded-[20px] xl:mb-0 mb-[38px]">
                   <Image src={image1} alt="sunset" data-scroll data-scroll-speed="-.05" className="rounded-[20px]"/>
@@ -116,7 +116,7 @@ const SectionTwo: React.FC = () => {
                   <Image src={image3} alt="tower" data-scroll data-scroll-speed="-.05"  />
                 </div>
               </div>
-              <div className="flex flex-col lg:flex-row justify-between items-end">
+              <div className="flex flex-col lg:flex-row justify-between items-end -translate-y-[60px]">
                 <div className="overflow-hidden rounded-[20px]">
                   <Image src={image2} alt="river" data-scroll data-scroll-speed="-.05"/>
                 </div>

@@ -93,6 +93,6 @@ export const SeasonSection = ({ children, seasonImage, seasonImageMobile , seaso
 export const Link = ({ icon, alt ,text, href, className }: { icon: string, alt: string , text: string, href: string, className?: string }) => (
   <li className={`hover:cursor-pointer hover:opacity-80 flex  font-bold items-center justify-start ${className ? className : ''}`}>
     <Image src={icon} alt={alt} className={`${alt === "Facebook icon" ? 'w-[17px] ml-[6.5px] mr-[22.5px]' : 'w-[30px] mr-[16px]' } object-contain`}/>
-    <a href={href} >{text}</a>
+    <a href={href} target="_blank" rel="sponsored noopener noreferrer" >{text}</a>
   </li>
 )
