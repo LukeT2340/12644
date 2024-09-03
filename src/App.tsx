@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <>
-      <div className="lg:bg-fixedBg bg-fixedBg-mobile bg-no-repeat lg:bg-fixed bg-scroll bg-cover">
+      <div className="lg:bg-fixedBg bg-fixedBg-mobile bg-no-repeat bg-fixed bg-cover">
         <main>
           <Header />
           <article>

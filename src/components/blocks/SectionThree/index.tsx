@@ -6,10 +6,6 @@ import image7 from "../../../assets/images/7.jpg";
 import image8 from "../../../assets/images/8.jpg";
 import image9 from "../../../assets/images/secThree-dec.png";
 import { motion } from "framer-motion";
-/*
-  Section three images don't have rounded corners. Added rounded corners using CSS
-
-*/
 
 const SectionThree: React.FC = () => (
   <section className="section-three bg-purple 3xl:h-[3000px] 2xl:h-[2750px] xl:h-[2660px] relative">
