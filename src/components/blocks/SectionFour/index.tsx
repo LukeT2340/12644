@@ -11,8 +11,6 @@ import { motion } from "framer-motion";
 
 const SectionFour: React.FC = () => (
   <section className="section-four bg-grassy-green 2xl:h-[2800px] xl:h-[2600px]">
-    {" "}
-    {/* Manually setting the height like this seems like a poor solution. Had to do this to avoid empty space down the bottom due to translate-y */}
     <Inner>
       <SeasonSection
         seasonImage={backgroundImg}
@@ -20,7 +18,7 @@ const SectionFour: React.FC = () => (
         seasonText="Spring"
       >
         <div className="flex flex-col justify-between xl:p-[40px]">
-          <div className="overflow-hidden py-[20px] rounded-[20px] w-full xl:mb-[51px] mb-[38px] ">
+          <div className="overflow-hidden py-[20px] rounded-[20px] w-full xl:mb-[51px] mb-[18px] ">
             <Image
               src={image10}
               alt="Taitung aboriginal dancers"
@@ -56,7 +54,7 @@ const SectionFour: React.FC = () => (
                     data-scroll-speed="-.05"
                   />
                 </div>
-                <div className="overflow-hidden rounded-[20px] lg:w-auto w-full">
+                <div className="overflow-hidden rounded-[20px] lg:w-auto w-full mb-[18px] md:mb-0">
                   <Image
                     src={image13}
                     alt="A serene mountain landscape featuring a clear blue lake surrounded by lush green hills under a bright sky with scattered clouds."
@@ -117,7 +115,7 @@ const SectionFour: React.FC = () => (
             src={image15}
             alt="bear cartoon"
             aria-label="bear"
-            className="absolute -bottom-[60px] -left-[80px] 2xl:-left-[220px] xl:-bottom-[50px] xl:-left-[130px] 2xl:w-auto xl:w-[290px] lg:w-[270px] w-[230px]"
+            className="absolute -bottom-[60px] -left-[80px] 2xl:-left-[220px] xl:-bottom-[50px] xl:-left-[130px] 2xl:w-auto xl:w-[290px] lg:w-[270px] w-[170px]"
             initial={{ opacity: 0, rotate: "30deg" }}
             whileInView={{ opacity: 1, rotate: "0deg" }}
             transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}

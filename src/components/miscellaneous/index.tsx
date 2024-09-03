@@ -122,7 +122,7 @@ export const SeasonSection = ({
   seasonImageMobile: string;
   seasonText: string;
 }) => (
-  <div className="relative flex flex-col items-center -translate-y-[130px] lg:-translate-y-[105px] xl:-translate-y-[120px] 2xl:-translate-y-[170px]  z-50">
+  <div className="relative flex flex-col items-center -translate-y-[110px] lg:-translate-y-[105px] xl:-translate-y-[120px] 2xl:-translate-y-[170px]  z-50">
     <div className="md:block hidden">
       <SeasonImage backgroundImg={seasonImage} text={seasonText} />
     </div>
