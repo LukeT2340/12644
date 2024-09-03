@@ -100,7 +100,7 @@ const SectionThree: React.FC = () => (
       src={image9}
       alt="bear cartoon"
       aria-label="bear"
-      className="absolute xl:-left-[80px] md:-left-[40px] md:bottom-[200px] bottom-[110px] -left-[70px] xl:bottom-[400px] z-50 2xl:w-auto xl:w-[290px] lg:w-[270px] w-[230px]"
+      className="absolute xl:-left-[80px] md:-left-[40px] md:bottom-[200px] bottom-[160px] -left-[70px] xl:bottom-[400px] z-50 2xl:w-auto xl:w-[290px] lg:w-[270px] w-[230px]"
       initial={{ rotate: "30deg" }}
       whileInView={{ rotate: "0deg" }}
       transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
