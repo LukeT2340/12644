@@ -13,7 +13,7 @@ const Links = () => {
                 <Image src={backgroundImg} alt="Taipei fireworks 2014" data-scroll data-scroll-speed="-.05" className="object-cover h-full"/>
             </div>
             <motion.div
-                className="max-w-[360px] text-white xl:ml-auto xl:mr-[20vw] pt-[107px] pb-[375px] z-40 relative"
+                className="max-w-[360px] text-white xl:ml-auto xl:mr-[20vw] pt-[107px] pb-[375px] z-40 relative ml-[48px]"
                 initial={{ opacity: 0.5, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}>
