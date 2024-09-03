@@ -37,7 +37,7 @@ export const Button: React.FC<ButtonProps> = ({
 
 export const Inner = ({ children }: { children: React.ReactNode }) => (
   <div className='flex justify-center'>
-    <div className="flex flex-col items-center lg:max-w-[98vw] 2xl:max-w-[95vw]">{children}</div>
+    <div className="flex flex-col items-center lg:max-w-[98vw] 2lg:max-w-[95vw]">{children}</div>
   </div>
 )
 
@@ -48,19 +48,10 @@ export const SeasonImage = ({ backgroundImg, text }: { backgroundImg: string, te
   return (
     <div className={`${text === "Winter" ? "w-[101vw]": "w-[100vw]"} relative overflow-hidden`}>
       <Image src={backgroundImg} alt={text} className={`${text === "Winter" ? "w-[101vw]": "w-[100vw]"}`} data-scroll data-scroll-speed="-.05" />
-      {/* <motion.h1
-          className="font-taiwan lg:text-[96px] text-[48px] leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'"
-          initial={{ opacity: 0, top: '70%', letterSpacing: '30px' }}
-          whileInView={{ opacity: 1, top: '50%', letterSpacing: 0 }}
-          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
-          viewport={{ once: true }}
-          >
-          {text}
-      </motion.h1> */}
-      <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden'>
-        {heading.map((el, index) => (
+      <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden w-[100%] text-center '>
+        {heading.map((char, index) => (
           <motion.span
-            className="font-taiwan lg:text-[96px] text-[48px] leading-[106px] text-white inline-block"
+            className="font-taiwan lg:text-[96px] md:text-[62px] text-[48px] leading-[106px] text-white inline-block"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
@@ -70,30 +61,23 @@ export const SeasonImage = ({ backgroundImg, text }: { backgroundImg: string, te
             }}
             key={index}
           >
-            {el}{" "}
+            {char}{" "}
           </motion.span>
         ))}
       </div>
-      {/* <motion.h1
-          className="font-taiwan lg:text-[96px] text-[48px] leading-[106px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'"
-          initial={{ opacity: 0, top: '70%', letterSpacing: '30px' }}
-          whileInView={{ opacity: 1, top: '50%', letterSpacing: 0 }}
-          transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
-          viewport={{ once: true }}
-          >
-          {text}
-      </motion.h1> */}
     </div>
   )
 }
 
 // White block with rounded corners where content sits
 export const CardBlock = ({ children }: { children: React.ReactNode }) => (
-<div className='lg:w-[980px] xl:w-[1280px] bg-white rounded-[20px] 2xl:py-[71px] xl:py-[55px] md:py-[45px] 2xl:px-[80px] xl:px-[65px] md:px-[55px] z-10 lg:-translate-y-[100px] xl:-translate-y-[150px] 2xl:-translate-y-[260px]'>{children}</div>  
+<div className='w-full lg:w-[980px] xl:w-[1280px] bg-white rounded-[20px] px-[30px] py-[35px] md:py-[70px] xl:py-[71px] xl:px-[80px] z-10 -translate-y-[100px] xl:-translate-y-[150px] 2xl:-translate-y-[260px]'>
+    {children}
+</div>  
 )
 
 export const SeasonSection = ({ children, seasonImage, seasonImageMobile , seasonText }: { children: React.ReactNode, seasonImage: string, seasonImageMobile: string, seasonText: string }) => (
-<div className='relative flex flex-col items-center -translate-y-[100px] lg:-translate-y-[105px] xl:-translate-y-[120px] 2xl:-translate-y-[200px] z-40'>
+<div className='relative flex flex-col items-center -translate-y-[130px] lg:-translate-y-[105px] xl:-translate-y-[120px] 2xl:-translate-y-[170px] z-50'>
   <div className='md:block hidden'>
     <SeasonImage backgroundImg={seasonImage} text={seasonText} />
   </div>
