@@ -32,12 +32,12 @@ export type MotionImageProps = {
   alt: string
   "data-sccroll"?: boolean
   "data-scroll-speed"?: string
-  initial?: { opacity?: number; rotate?: string; scale?: number; y?: string }
+  initial?: { opacity?: number; rotate?: string; scale?: number; y?: number }
   whileInView?: {
     opacity?: number
     rotate?: string
     scale?: number
-    y?: string
+    y?: number
   }
   transition?: { duration: number; delay: number; ease: string }
   className?: string
