@@ -4,13 +4,11 @@ import backgroundImgMobile from "../../../assets/images/secThree-bg-mobile.png";
 import image6 from "../../../assets/images/6.jpg";
 import image7 from "../../../assets/images/7.jpg";
 import image8 from "../../../assets/images/8.jpg";
-//import image9 from "../../../assets/images/secThree-dec.png";
+import image9 from "../../../assets/images/secThree-dec.png";
 import { motion } from "framer-motion";
 
 const SectionThree: React.FC = () => (
   <section className="section-three bg-purple 3xl:h-[3000px] 2xl:h-[2750px] xl:h-[2660px] relative">
-    {" "}
-    {/* Manually setting the height like this seems like a poor solution. Had to do this to avoid empty space down the bottom due to translate-y */}
     <Inner>
       <SeasonSection
         seasonImage={backgroundImg}
@@ -80,7 +78,7 @@ const SectionThree: React.FC = () => (
               </p>
             </motion.div>
           </div>
-          <div className="overflow-hidden py-[20px] rounded-[20px] xl:-translate-y-[270px] lg:-translate-y-[150px] lg:mt-[20px] ">
+          <div className="overflow-hidden lg:py-[20px] py-0 rounded-[20px] xl:-translate-y-[270px] lg:-translate-y-[150px] lg:mt-[20px] ">
             <Image
               src={image8}
               alt="dumplings"
@@ -92,7 +90,7 @@ const SectionThree: React.FC = () => (
         </div>
       </SeasonSection>
     </Inner>
-    {/* <MotionImage
+    <MotionImage
       src={image9}
       alt="bear cartoon"
       aria-label="bear"
@@ -101,7 +99,7 @@ const SectionThree: React.FC = () => (
       whileInView={{ rotate: "0deg" }}
       transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
       viewport={{ once: true }}
-    /> */}
+    />
   </section>
 );
 

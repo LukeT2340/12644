@@ -18,11 +18,11 @@ const SectionFour: React.FC = () => (
         seasonText="Spring"
       >
         <div className="flex flex-col justify-between xl:p-[40px]">
-          <div className="overflow-hidden py-[20px] rounded-[20px] w-full xl:mb-[51px] mb-[18px] ">
+          <div className="overflow-hidden lg:py-[20px] py-[0px] rounded-[20px] w-full xl:mb-[51px] mb-[31px] ">
             <Image
               src={image10}
               alt="Taitung aboriginal dancers"
-              className="rounded-[20px]"
+              className="rounded-[20px] w-full"
               data-scroll
               data-scroll-speed="-.05"
             />
@@ -115,7 +115,7 @@ const SectionFour: React.FC = () => (
             src={image15}
             alt="bear cartoon"
             aria-label="bear"
-            className="absolute -bottom-[60px] -left-[80px] 2xl:-left-[220px] xl:-bottom-[50px] xl:-left-[130px] 2xl:w-auto xl:w-[290px] lg:w-[270px] w-[170px]"
+            className="absolute -bottom-[60px] -left-[40px] 2xl:-left-[220px] xl:-bottom-[50px] xl:-left-[130px] 2xl:w-auto xl:w-[290px] lg:w-[270px] w-[150px]"
             initial={{ opacity: 0, rotate: "30deg" }}
             whileInView={{ opacity: 1, rotate: "0deg" }}
             transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
