@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
-import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion"
+import { useMediaQuery } from "react-responsive"
 
 const Hero: React.FC = () => {
-  const mobile = useMediaQuery({ maxWidth: 1023 });
+  const mobile = useMediaQuery({ maxWidth: 1023 })
 
   return (
     <section className="hero relative h-screen">
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
         </motion.h1>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

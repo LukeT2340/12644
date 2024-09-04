@@ -1,19 +1,19 @@
-import { Inner, Image, SeasonSection, MotionImage } from "../../miscellaneous";
+import { Inner, Image, SeasonSection, MotionImage } from "../../miscellaneous"
 
-import backgroundImg from "../../../assets/images/sectTwo-bg.png";
-import backgroundImgMobile from "../../../assets/images/secTwo-bg-mobile.png";
+import backgroundImg from "../../../assets/images/sectTwo-bg.png"
+import backgroundImgMobile from "../../../assets/images/secTwo-bg-mobile.png"
 
-import image1 from "../../../assets/images/1.jpg";
-import image2 from "../../../assets/images/2.jpg";
-import image3 from "../../../assets/images/3.jpg";
-import image4 from "../../../assets/images/4.jpg";
-import image5 from "../../../assets/images/5.png";
-import Introduction from "../../blocks/Introduction/index";
-import { motion } from "framer-motion";
-import { useMediaQuery } from "react-responsive";
+import image1 from "../../../assets/images/1.jpg"
+import image2 from "../../../assets/images/2.jpg"
+import image3 from "../../../assets/images/3.jpg"
+import image4 from "../../../assets/images/4.jpg"
+import image5 from "../../../assets/images/5.png"
+import Introduction from "../../blocks/Introduction/index"
+import { motion } from "framer-motion"
+import { useMediaQuery } from "react-responsive"
 
 const SectionTwo: React.FC = () => {
-  const mobile = useMediaQuery({ maxWidth: 1023 });
+  const mobile = useMediaQuery({ maxWidth: 1023 })
 
   if (mobile) {
     return (
@@ -117,13 +117,11 @@ const SectionTwo: React.FC = () => {
           </Inner>
         </div>
       </section>
-    );
+    )
   }
 
   return (
     <section className="section-two 2xl:h-[3000px] xl:h-[2900px]">
-      {" "}
-      {/* Manually setting the height like this seems like a poor solution. Had to do this to avoid empty space down the bottom due to translate-y */}
       <Introduction />
       <div className="bg-light-orange">
         <Inner>
@@ -231,7 +229,7 @@ const SectionTwo: React.FC = () => {
         </Inner>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionTwo;
+export default SectionTwo

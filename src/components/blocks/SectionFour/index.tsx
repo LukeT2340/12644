@@ -1,13 +1,13 @@
-import { Inner, SeasonSection, Image, MotionImage } from "../../miscellaneous";
-import backgroundImg from "../../../assets/images/secFour-bg-v2.png";
-import backgroundImgMobile from "../../../assets/images/secFour-bg-mobile.png";
-import image10 from "../../../assets/images/10.jpg";
-import image11 from "../../../assets/images/11.jpg";
-import image12 from "../../../assets/images/12.jpg";
-import image13 from "../../../assets/images/13.jpg";
-import image14 from "../../../assets/images/14.jpg";
-import image15 from "../../../assets/images/secFour-dec.png";
-import { motion } from "framer-motion";
+import { Inner, SeasonSection, Image, MotionImage } from "../../miscellaneous"
+import backgroundImg from "../../../assets/images/secFour-bg-v2.png"
+import backgroundImgMobile from "../../../assets/images/secFour-bg-mobile.png"
+import image10 from "../../../assets/images/10.jpg"
+import image11 from "../../../assets/images/11.jpg"
+import image12 from "../../../assets/images/12.jpg"
+import image13 from "../../../assets/images/13.jpg"
+import image14 from "../../../assets/images/14.jpg"
+import image15 from "../../../assets/images/secFour-dec.png"
+import { motion } from "framer-motion"
 
 const SectionFour: React.FC = () => (
   <section className="section-four bg-grassy-green 2xl:h-[2800px] xl:h-[2600px]">
@@ -125,6 +125,6 @@ const SectionFour: React.FC = () => (
       </SeasonSection>
     </Inner>
   </section>
-);
+)
 
-export default SectionFour;
+export default SectionFour

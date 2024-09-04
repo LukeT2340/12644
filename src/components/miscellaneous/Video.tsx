@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from "react"
 // import useExternalScripts from '../../hooks/useExternalScripts'
 
 interface VideoProps {
@@ -9,14 +9,14 @@ interface VideoProps {
 }
 
 const VideoJS = React.forwardRef((props: any, ref: any) =>
-  React.createElement('video-js', { ...props, ref })
+  React.createElement("video-js", { ...props, ref })
 )
 
 const useExternalScripts = (url: string) => {
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
-    const script = document.createElement('script')
+    const script = document.createElement("script")
     script.src = url
     script.onload = () => setLoaded(true)
 
@@ -36,7 +36,7 @@ const Video = ({ scriptUrl, playerId, videoId, className }: VideoProps) => {
 
   const videoOptionsObserver = {
     root: null,
-    rootMargin: '0px',
+    rootMargin: "0px",
     threshold: 0.1,
   }
 
@@ -49,7 +49,7 @@ const Video = ({ scriptUrl, playerId, videoId, className }: VideoProps) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const video = entry.target
-          const videoID = video.getAttribute('id')
+          const videoID = video.getAttribute("id")
           // @ts-ignore
           const player = videojs.getPlayer(videoID)
 
@@ -68,7 +68,7 @@ const Video = ({ scriptUrl, playerId, videoId, className }: VideoProps) => {
           // @ts-ignore
           if (window.videojs) {
             const video = entry.target
-            const videoID = video.getAttribute('id')
+            const videoID = video.getAttribute("id")
             const player = videojs.getPlayer(videoID)
             if (!player.paused()) {
               player.pause()

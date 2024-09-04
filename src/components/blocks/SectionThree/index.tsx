@@ -1,11 +1,11 @@
-import { SeasonSection, Inner, Image, MotionImage } from "../../miscellaneous";
-import backgroundImg from "../../../assets/images/secThree-bg.png";
-import backgroundImgMobile from "../../../assets/images/secThree-bg-mobile.png";
-import image6 from "../../../assets/images/6.jpg";
-import image7 from "../../../assets/images/7.jpg";
-import image8 from "../../../assets/images/8.jpg";
-import image9 from "../../../assets/images/secThree-dec-v2.png";
-import { motion } from "framer-motion";
+import { SeasonSection, Inner, Image, MotionImage } from "../../miscellaneous"
+import backgroundImg from "../../../assets/images/secThree-bg.png"
+import backgroundImgMobile from "../../../assets/images/secThree-bg-mobile.png"
+import image6 from "../../../assets/images/6.jpg"
+import image7 from "../../../assets/images/7.jpg"
+import image8 from "../../../assets/images/8.jpg"
+import image9 from "../../../assets/images/secThree-dec-v2.png"
+import { motion } from "framer-motion"
 
 const SectionThree: React.FC = () => (
   <section className="section-three bg-purple 3xl:h-[3000px] 2xl:h-[2750px] xl:h-[2660px] relative">
@@ -101,6 +101,6 @@ const SectionThree: React.FC = () => (
       viewport={{ once: true }}
     />
   </section>
-);
+)
 
-export default SectionThree;
+export default SectionThree

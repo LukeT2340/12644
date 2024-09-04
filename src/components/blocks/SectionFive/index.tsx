@@ -1,10 +1,10 @@
-import { Inner, SeasonSection, Image, MotionImage } from "../../miscellaneous";
-import backgroundImg from "../../../assets/images/secFive-bg.png";
-import backgroundImgMobile from "../../../assets/images/secFive-bg-mobile.png";
-import image15 from "../../../assets/images/15.jpg";
-import image16 from "../../../assets/images/16.jpg";
-import image17 from "../../../assets/images/secFive-dec.png";
-import { motion } from "framer-motion";
+import { Inner, SeasonSection, Image, MotionImage } from "../../miscellaneous"
+import backgroundImg from "../../../assets/images/secFive-bg.png"
+import backgroundImgMobile from "../../../assets/images/secFive-bg-mobile.png"
+import image15 from "../../../assets/images/15.jpg"
+import image16 from "../../../assets/images/16.jpg"
+import image17 from "../../../assets/images/secFive-dec.png"
+import { motion } from "framer-motion"
 
 const SectionFive: React.FC = () => (
   <section className="section-five bg-sky-blue 3xl:h-[2050px] 2xl:h-[1850px] xl:h-[1800px] h-[2100px] md:h-[2750px] lg:h-[1600px]">
@@ -100,6 +100,6 @@ const SectionFive: React.FC = () => (
       </SeasonSection>
     </Inner>
   </section>
-);
+)
 
-export default SectionFive;
+export default SectionFive

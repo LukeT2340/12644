@@ -1,6 +1,6 @@
-import image5 from "../../../assets/images/intro-dec.png";
-import gradient from "../../../assets/images/gradient-bg.png";
-import { Image, Inner } from "../../../components/miscellaneous/index.tsx";
+import image5 from "../../../assets/images/intro-dec.png"
+import gradient from "../../../assets/images/gradient-bg.png"
+import { Image, Inner } from "../../../components/miscellaneous/index.tsx"
 
 const Introduction = () => {
   return (
@@ -31,7 +31,7 @@ const Introduction = () => {
         </div>
       </div>
     </Inner>
-  );
-};
+  )
+}
 
-export default Introduction;
+export default Introduction

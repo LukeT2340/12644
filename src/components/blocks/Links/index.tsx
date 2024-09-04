@@ -1,9 +1,9 @@
-import { Link, Image } from "../../miscellaneous";
-import instagram from "../../../assets/images/instagram-icon.png";
-import facebook from "../../../assets/images/facebook-icon.png";
-import home from "../../../assets/images/home-icon.png";
-import backgroundImg from "../../../assets/images/links-bg.jpg";
-import { motion } from "framer-motion";
+import { Link, Image } from "../../miscellaneous"
+import instagram from "../../../assets/images/instagram-icon.png"
+import facebook from "../../../assets/images/facebook-icon.png"
+import home from "../../../assets/images/home-icon.png"
+import backgroundImg from "../../../assets/images/links-bg.jpg"
+import { motion } from "framer-motion"
 
 const Links = () => {
   return (
@@ -50,7 +50,7 @@ const Links = () => {
         </ul>
       </motion.div>
     </section>
-  );
-};
+  )
+}
 
-export default Links;
+export default Links

@@ -1,26 +1,26 @@
-import { Navigation, Mousewheel, EffectFade, Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useEffect, useState } from "react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
-import "swiper/css/effect-fade";
+import { Navigation, Mousewheel, EffectFade, Autoplay } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { useEffect, useState } from "react"
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/effect-coverflow"
+import "swiper/css/effect-fade"
 
-import back from "../assets/images/back-arrow.svg";
-import forward from "../assets/images/forward-arrow.svg";
+import back from "../assets/images/back-arrow.svg"
+import forward from "../assets/images/forward-arrow.svg"
 
 type SlidesProps = {
-  id: number;
-  image: string;
-};
+  id: number
+  image: string
+}
 
 const SwiperCustom: React.FC<{
-  slidesData: SlidesProps[];
-  keyProp: string;
+  slidesData: SlidesProps[]
+  keyProp: string
 }> = ({ slidesData, keyProp }) => {
-  const [swiperInstance, setSwiperInstance] = useState({});
+  const [swiperInstance, setSwiperInstance] = useState({})
 
-  useEffect(() => {}, [swiperInstance]);
+  useEffect(() => {}, [swiperInstance])
 
   return (
     <div className="relative">
@@ -43,7 +43,7 @@ const SwiperCustom: React.FC<{
           prevEl: ".image-swiper-button-prev",
         }}
         onSwiper={(swiper) => {
-          setSwiperInstance(swiper);
+          setSwiperInstance(swiper)
         }}
       >
         {slidesData.map((slide: { image: string; id: number }) => (
@@ -65,7 +65,7 @@ const SwiperCustom: React.FC<{
         <img src={back} alt="back button" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SwiperCustom;
+export default SwiperCustom

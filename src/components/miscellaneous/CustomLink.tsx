@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react"
 
 interface CustomLinkProps {
-  href: string;
-  className: string;
-  children: React.ReactNode;
+  href: string
+  className: string
+  children: React.ReactNode
 }
 
 const CustomLink = ({ href, className = "", children }: CustomLinkProps) => {
@@ -19,7 +19,7 @@ const CustomLink = ({ href, className = "", children }: CustomLinkProps) => {
         {children}
       </a>{" "}
     </>
-  );
-};
+  )
+}
 
-export default CustomLink;
+export default CustomLink

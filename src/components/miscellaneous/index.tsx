@@ -1,14 +1,14 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 import {
   ImageProps,
   CustomLinkProps,
   ButtonProps,
   MotionImageProps,
-} from "../../types";
+} from "../../types"
 
 export const Image: React.FC<ImageProps> = (props) => {
-  return <img {...props} />;
-};
+  return <img {...props} />
+}
 
 export const CustomLink = ({
   href,
@@ -27,12 +27,12 @@ export const CustomLink = ({
         {children}
       </a>{" "}
     </>
-  );
-};
+  )
+}
 
 export const MotionImage: React.FC<MotionImageProps> = (props) => (
   <motion.img {...props} />
-);
+)
 
 export const Button: React.FC<ButtonProps> = ({
   href,
@@ -49,8 +49,8 @@ export const Button: React.FC<ButtonProps> = ({
     >
       <p className="inline sm:text-24 uppercase">{text}</p>
     </a>
-  );
-};
+  )
+}
 
 export const Inner = ({ children }: { children: React.ReactNode }) => (
   <div className="flex justify-center">
@@ -58,17 +58,17 @@ export const Inner = ({ children }: { children: React.ReactNode }) => (
       {children}
     </div>
   </div>
-);
+)
 
 // Title of each section with image representing the season and text that sits in the center of the image
 export const SeasonImage = ({
   backgroundImg,
   text,
 }: {
-  backgroundImg: string;
-  text: string;
+  backgroundImg: string
+  text: string
 }) => {
-  const heading = text.split("");
+  const heading = text.split("")
 
   return (
     <div
@@ -99,8 +99,8 @@ export const SeasonImage = ({
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
 // White block with rounded corners where content sits
 export const CardBlock = ({ children }: { children: React.ReactNode }) => (
@@ -109,7 +109,7 @@ export const CardBlock = ({ children }: { children: React.ReactNode }) => (
       {children}
     </div>
   </div>
-);
+)
 
 export const SeasonSection = ({
   children,
@@ -117,10 +117,10 @@ export const SeasonSection = ({
   seasonImageMobile,
   seasonText,
 }: {
-  children: React.ReactNode;
-  seasonImage: string;
-  seasonImageMobile: string;
-  seasonText: string;
+  children: React.ReactNode
+  seasonImage: string
+  seasonImageMobile: string
+  seasonText: string
 }) => (
   <div className="relative flex flex-col items-center -translate-y-[110px] lg:-translate-y-[105px] xl:-translate-y-[120px] 2xl:-translate-y-[170px]  z-50">
     <div className="md:block hidden">
@@ -131,7 +131,7 @@ export const SeasonSection = ({
     </div>
     <CardBlock>{children}</CardBlock>
   </div>
-);
+)
 
 export const Link = ({
   icon,
@@ -140,14 +140,14 @@ export const Link = ({
   href,
   className,
 }: {
-  icon: string;
-  alt: string;
-  text: string;
-  href: string;
-  className?: string;
+  icon: string
+  alt: string
+  text: string
+  href: string
+  className?: string
 }) => (
   <li
-    className={`hover:cursor-pointer hover:opacity-80 flex  font-bold items-center justify-start ${
+    className={`transition-opacity duration-300 ease-out hover:cursor-pointer hover:opacity-80 flex  font-bold items-center justify-start ${
       className ? className : ""
     }`}
   >
@@ -164,4 +164,4 @@ export const Link = ({
       {text}
     </a>
   </li>
-);
+)
